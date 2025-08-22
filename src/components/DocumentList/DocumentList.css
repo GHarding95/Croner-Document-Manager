@@ -1,0 +1,82 @@
+.document-list {
+  margin-top: 24px;
+}
+
+.document-list.virtualized {
+  height: 600px;
+  overflow: hidden;
+}
+
+/* Ensure virtualized items have proper spacing */
+.document-list.virtualized .document-item {
+  margin-bottom: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.virtualized-row {
+  padding: 0;
+  margin: 0;
+}
+
+/* Smooth scrolling for virtualized lists */
+.document-list.virtualized {
+  scroll-behavior: smooth;
+}
+
+.document-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px;
+  color: #6c757d;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.document-list-empty h3 {
+  margin: 0 0 12px 0;
+  color: #495057;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.document-list-empty p {
+  margin: 0 0 24px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.clear-search-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+.clear-search-button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.clear-search-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}

@@ -1,0 +1,197 @@
+.document-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.document-item:hover {
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.document-item:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+.document-item.focused {
+  border-color: #007bff;
+  background-color: #f8f9ff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.document-item.folder {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #dee2e6;
+}
+
+.document-item.folder:hover {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-color: #007bff;
+}
+
+.document-item.folder:focus {
+  background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+  border-color: #007bff;
+}
+
+.document-item.folder.focused {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-color: #007bff;
+}
+
+.document-item.file {
+  background: white;
+}
+
+.document-item.file:hover {
+  background-color: #f8f9fa;
+}
+
+.document-item.file:focus {
+  background-color: #f8f9fa;
+}
+
+.document-item.file.focused {
+  background-color: #f0f8ff;
+}
+
+/* Focus ring for keyboard navigation */
+.document-item:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Folder arrow indicator */
+.folder-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.document-item:hover .folder-arrow {
+  opacity: 1;
+  color: #007bff;
+  transform: translateY(-50%) translateX(2px);
+}
+
+.document-item:focus .folder-arrow {
+  opacity: 1;
+  color: #007bff;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .document-item:focus {
+    border-width: 3px;
+    border-color: #000;
+  }
+  
+  .document-item.focused {
+    border-width: 3px;
+    border-color: #000;
+    background-color: #ffff00;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .document-item {
+    transition: none;
+  }
+  
+  .document-item:hover {
+    transform: none;
+  }
+  
+  .folder-arrow {
+    transition: none;
+  }
+  
+  .document-item:hover .folder-arrow {
+    transform: translateY(-50%);
+  }
+}
+
+.document-icon {
+  font-size: 2rem;
+  margin-right: 16px;
+  min-width: 48px;
+  text-align: center;
+}
+
+.document-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.document-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.document-details {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.document-type {
+  background: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.document-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.folder-indicator {
+  color: #007bff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .document-item {
+    padding: 12px;
+  }
+  
+  .document-icon {
+    font-size: 1.5rem;
+    margin-right: 12px;
+    min-width: 36px;
+  }
+  
+  .document-details {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}

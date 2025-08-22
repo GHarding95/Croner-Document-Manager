@@ -1,0 +1,182 @@
+.app {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.app-header {
+  background: white;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+  outline: none;
+}
+
+.app-header h1 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.app-header p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.keyboard-shortcuts-help {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.shortcut-hint {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.shortcut {
+  display: inline-block;
+  background: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.3rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+  color: #495057;
+}
+
+.shortcut-divider {
+  display: inline-block;
+  color: #6c757d;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.app-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 32px 24px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.test-error-button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 16px auto 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  line-height: 1.7;
+  transition: background-color 0.2s ease;
+}
+
+.test-error-button:hover {
+  background: #c82333;
+}
+
+.test-error-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+.test-error-button .icon {
+  font-size: 1.1rem;
+}
+
+.error-test-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.test-error-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #dc3545;
+  border-radius: 6px;
+  background: transparent;
+  color: #dc3545;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.test-error-button:hover {
+  background: #dc3545;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.test-error-button:focus {
+  outline: 3px solid rgba(220, 53, 69, 0.5);
+  outline-offset: 2px;
+}
+
+.test-error-button .icon {
+  font-size: 1.1rem;
+}
+
+/* Responsive design for error test buttons */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 24px 16px;
+    margin-bottom: 24px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .app-header p {
+    font-size: 1rem;
+  }
+  
+  .app-main {
+    padding: 0 16px 24px 16px;
+  }
+
+  .error-test-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .test-error-button {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+}

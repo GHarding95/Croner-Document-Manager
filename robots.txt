@@ -1,0 +1,23 @@
+# Robots.txt for Croner Document Manager
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl delay (optional - helps with server load)
+# Crawl-delay: 1
+
+# Sitemap (uncomment and update when you have one)
+# Sitemap: https://yourdomain.com/sitemap.xml
+
+# Additional directives for specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
